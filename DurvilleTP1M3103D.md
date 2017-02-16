@@ -2,6 +2,7 @@
 
 ## 1)Code Client
 =====
+- Ce
 from socket import *
 
 serverName = 'hostname’
