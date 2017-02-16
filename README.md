@@ -1,7 +1,7 @@
 # Tp1-Réseaux Franck Durville
 
-## 1) <Code> <Client>
+## 1) (<Code>) (<Client>)
 
-## 2) <Code> <Serveur>
+## 2)(<Code>) (<Serveur>)
 
 
