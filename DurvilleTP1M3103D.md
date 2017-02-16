@@ -1,8 +1,10 @@
 # Tp1-Client/Serveur UDP en Python Franck Durville
 
-## 1)Code Client
+## I)Code Client
 =====
 - Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est l'émeteur du message que l'on souhaite envoyé au serveur .
+
+###Programme :
 
 	from socket import *                                           
                                                                 
@@ -16,7 +18,7 @@
 	 clientSocket.close()                                           
 
 
-## 2)Code Serveur
+## II)Code Serveur
 =====
 - Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est le récepteur du message envoyé par le client .
 
@@ -31,5 +33,5 @@ while 1:
 	modifiedMessage = message.upper()
 	serverSocket.sendto(modifiedMessage, clientAddress)
 
-## 3)Commande netcat en mode client(resp. serveur). 
+## III)Commande netcat en mode client(resp. serveur). 
 =====
