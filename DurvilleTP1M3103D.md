@@ -31,5 +31,5 @@ while 1:
 	modifiedMessage = message.upper()
 	serverSocket.sendto(modifiedMessage, clientAddress)
 
-# 3)Commande netcat en mode client(resp. serveur). 
+## 3)Commande netcat en mode client(resp. serveur). 
 =====
