@@ -1,7 +1,7 @@
 # Tp1-Client/Serveur UDP en Python Franck Durville
 
 ## 1)Code Client
-===================
+=====
 from socket import *
 
 serverName = 'hostname’
@@ -15,7 +15,7 @@ clientSocket.close()
 
 
 ## 2)Code Serveur
-----------------------
+----
 from socket import *
 serverPort = 12000
 serverSocket = socket(AF_INET, SOCK_DGRAM)
