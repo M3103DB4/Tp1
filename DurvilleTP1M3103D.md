@@ -2,7 +2,8 @@
 
 ## 1)Code Client
 =====
-- Ce
+- Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est l'émeteur du message que l'on souhaite envoyé au serveur .
+
 from socket import *
 
 serverName = 'hostname’
@@ -17,6 +18,8 @@ clientSocket.close()
 
 ## 2)Code Serveur
 =====
+- Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est le récepteur du message envoyé par le client .
+
 from socket import *
 serverPort = 12000
 serverSocket = socket(AF_INET, SOCK_DGRAM)
@@ -27,3 +30,6 @@ while 1:
 	message, clientAddress = serverSocket.recvfrom(2048)
 	modifiedMessage = message.upper()
 	serverSocket.sendto(modifiedMessage, clientAddress)
+
+# 3)Commande netcat en mode client(resp. serveur). 
+=====
