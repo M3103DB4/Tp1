@@ -27,13 +27,19 @@
 	from socket import *
 	serverPort = 12000
 	serverSocket = socket(AF_INET, SOCK_DGRAM)
-	serverSocket.bind(('', serverPort))
+	serverSocket.bind(('localhost', serverPort))
 	print "The server is ready to receive"
 
 	while 1:
 	message, clientAddress = serverSocket.recvfrom(2048)
 	modifiedMessage = message.upper()
+	print modifiedMessage 
 	serverSocket.sendto(modifiedMessage, clientAddress)
 
 ## III)Commande netcat en mode client(resp. serveur)
 =====
+
+La commande Net cat est une commande pratique et assez simple. En UDP dans le terminal client il sufit de taper la commande
+"nc -u localhost 12000".  En détail : nc = Netcat ; -u = UDP ; localhost= nom de la machine ; 12000=port
+
+En ce qui concerne la partie Serveur il faut taper dans le Terminal la commande ""nc -l -u localhost 12000". On rajoute -l pour listen .
