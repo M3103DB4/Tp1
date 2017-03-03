@@ -2,7 +2,9 @@
 
 ## I)Code Client
 =====
-- Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est l'émeteur du message que l'on souhaite envoyé au serveur .
+- Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Une fois dans le terminal il faut ouvrir  le fichier à l'aide de la commande ls , cd (emplacement du fichier) puis utiliser la commande : python client.py .Il est l'émeteur du message que l'on souhaite envoyé au serveur .
+
+
 
 ###Programme :
 
