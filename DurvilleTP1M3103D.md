@@ -101,3 +101,13 @@ Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" pa
 	capitalizedSentence = sentence.upper()
 	connectionSocket.send(capitalizedSentence)
 	connectionSocket.close()
+
+## III)Commande netcat en mode client(resp. serveur)
+=====
+
+La commande Net cat est une commande pratique et assez simple. En UDP dans le terminal client il sufit de taper la commande
+"nc -u localhost 12000".  En détail : nc = Netcat ; -u = UDP ; localhost= nom de la machine ; 12000=port
+
+En ce qui concerne la partie Serveur il faut taper dans le Terminal la commande ""nc -l -u localhost 12000". On rajoute -l pour listen .
+
+Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" par l'adresse ip de la machine concerné .On l'obtient grâce à la commande ifconfig dans le terminal.
