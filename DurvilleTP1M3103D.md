@@ -113,3 +113,75 @@ En ce qui concerne la partie Serveur il faut taper dans le Terminal la commande 
 Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" par l'adresse ip de la machine concerné .On l'obtient grâce à la commande ifconfig dans le terminal.
 
 
+
+CLIENT
+==
+
+from socket import *
+
+serverName = 'localhost'
+
+serverPort = 12000
+
+clientSocket = socket(AF_INET, SOCK_STREAM)
+
+clientSocket.connect((serverName,serverPort))
+
+sentence = raw_input('Input lowercase sentence:')
+
+clientSocket.send(sentence)
+
+modifiedSentence = clientSocket.recv(1024)
+
+print 'From Server:', modifiedSentence
+
+clientSocket.close()
+
+
+serveur 
+==
+from socket import *
+
+serverPort = 12000
+
+serverSocket = socket(AF_INET,SOCK_STREAM)
+
+serverSocket.bind(('',serverPort))
+
+serverSocket.listen(1)
+
+print 'The server is ready to receive'
+
+while 1:
+
+	connectionSocket,addr = serverSocket.accept()
+	sentence = connectionSocket.recv(1024)
+	capitalizedSentence = sentence.upper()
+	connectionSocket.send(capitalizedSentence)
+	connectionSocket.close()
+
+
+from socket import *
+
+serverPort = 12000
+serverPort = 12000
+serverName = 'localhost'
+
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.connect((serverName,serverPort))
+
+serverSocket = socket(AF_INET,SOCK_STREAM)
+serverSocket.bind(('',serverPort))
+
+serverSocket.listen(1)
+
+print 'The server is ready to receive'
+
+while 1:
+
+	connectionSocket, addr = serverSocket.accept()
+	sentence = connectionSocket.recv(1024)
+	connectionSocket.send(capitalizedSentence)
+	connectionSocket.close()
+	clientSocket.close()
+
