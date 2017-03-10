@@ -106,8 +106,10 @@ Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" pa
 =====
 
 La commande Net cat est une commande pratique et assez simple. En UDP dans le terminal client il sufit de taper la commande
-"nc -u localhost 12000".  En détail : nc = Netcat ; -u = UDP ; localhost= nom de la machine ; 12000=port
+"nc -t localhost 12000".  En détail : nc = Netcat ; -t = TCP ; localhost= nom de la machine ; 12000=port
 
-En ce qui concerne la partie Serveur il faut taper dans le Terminal la commande ""nc -l -u localhost 12000". On rajoute -l pour listen .
+En ce qui concerne la partie Serveur il faut taper dans le Terminal la commande ""nc -l -u -p 12000". On rajoute -l pour listen et -p 12000 pour le numéro de port.
 
 Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" par l'adresse ip de la machine concerné .On l'obtient grâce à la commande ifconfig dans le terminal.
+
+
