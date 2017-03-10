@@ -49,6 +49,14 @@ En ce qui concerne la partie Serveur il faut taper dans le Terminal la commande 
 Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" par l'adresse ip de la machine concerné .On l'obtient grâce à la commande ifconfig dans le terminal.
 
 
+
+
+
+
+
+
+
+
 # Tp2-Client/Serveur TCP en Python Franck Durville
 
 ## I)Code Client
