@@ -2,6 +2,7 @@
 
 ## I)Code Client
 =====
+
 - Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Une fois dans le terminal il faut ouvrir  le fichier à l'aide de la commande ls , cd (emplacement du fichier) puis utiliser la commande : python client.py .Il est l'émeteur du message que l'on souhaite envoyé au serveur . Udp est le mode non connecté.
 
 
@@ -22,6 +23,7 @@
 
 ## II)Code Serveur
 =====
+
 - Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est le récepteur du message envoyé par le client . Udp est le mode non connecté.
 
 ###Programme :
@@ -82,6 +84,7 @@ Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" pa
 
 ## II)Code Serveur
 =====
+
 - Pour que ce programme codé en langage Python fonctionne , il a fallut le copié dans un editeur linux, rectifier quelques lignes de code puis l'enregistrer en .py pour pouvoir le lancer dans le terminal . Il est le récepteur du message envoyé par le client . Le tcp est le mode connecté .
 
 ###Programme :
@@ -138,7 +141,7 @@ CLIENT
 	clientSocket.close()
 
 
-serveur 
+Serveur 
 ==
 	from socket import *
 
