@@ -117,42 +117,42 @@ Pour communiquer avec d'autres machines il suffit de remplacer le "localhost" pa
 CLIENT
 ==
 
-from socket import *
+	from socket import *
 
-serverName = 'localhost'
+	serverName = 'localhost'
 
-serverPort = 12000
+	serverPort = 12000
 
-clientSocket = socket(AF_INET, SOCK_STREAM)
+	clientSocket = socket(AF_INET, SOCK_STREAM)
 
-clientSocket.connect((serverName,serverPort))
+	clientSocket.connect((serverName,serverPort))
 
-sentence = raw_input('Input lowercase sentence:')
+	sentence = raw_input('Input lowercase sentence:')
 
-clientSocket.send(sentence)
+	clientSocket.send(sentence)
 
-modifiedSentence = clientSocket.recv(1024)
+	modifiedSentence = clientSocket.recv(1024)
 
-print 'From Server:', modifiedSentence
+	print 'From Server:', modifiedSentence
 
-clientSocket.close()
+	clientSocket.close()
 
 
 serveur 
 ==
-from socket import *
+	from socket import *
 
-serverPort = 12000
+	serverPort = 12000
 
-serverSocket = socket(AF_INET,SOCK_STREAM)
+	serverSocket = socket(AF_INET,SOCK_STREAM)
 
-serverSocket.bind(('',serverPort))
+	serverSocket.bind(('',serverPort))
 
-serverSocket.listen(1)
+	serverSocket.listen(1)
 
-print 'The server is ready to receive'
+	print 'The server is ready to receive'
 
-while 1:
+	while 1:
 
 	connectionSocket,addr = serverSocket.accept()
 	sentence = connectionSocket.recv(1024)
@@ -161,23 +161,23 @@ while 1:
 	connectionSocket.close()
 
 
-from socket import *
+	from socket import *
 
-serverPort = 12000
-serverPort = 12000
-serverName = 'localhost'
+	serverPort = 12000
+	serverPort = 12000
+	serverName = 'localhost'
 
-clientSocket = socket(AF_INET, SOCK_STREAM)
-clientSocket.connect((serverName,serverPort))
+	clientSocket = socket(AF_INET, SOCK_STREAM)
+	clientSocket.connect((serverName,serverPort))
 
-serverSocket = socket(AF_INET,SOCK_STREAM)
-serverSocket.bind(('',serverPort))
+	serverSocket = socket(AF_INET,SOCK_STREAM)
+	serverSocket.bind(('',serverPort))
 
-serverSocket.listen(1)
+	serverSocket.listen(1)
 
-print 'The server is ready to receive'
+	print 'The server is ready to receive'
 
-while 1:
+	while 1:
 
 	connectionSocket, addr = serverSocket.accept()
 	sentence = connectionSocket.recv(1024)
