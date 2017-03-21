@@ -194,13 +194,13 @@ Le FILTRAGE
 
 #Programme serveur :
 ===
-from socket import *
-serverPort = 13000
-serverSocket = socket(AF_INET,SOCK_STREAM)
-serverSocket.bind(('',serverPort))
-serverSocket.listen(1)
-print 'The server is ready to receive'
-while 1:
+	from socket import *
+	serverPort = 13000
+	serverSocket = socket(AF_INET,SOCK_STREAM)
+	serverSocket.bind(('',serverPort))
+	serverSocket.listen(1)
+	print 'The server is ready to receive'
+	while 1:
 	connectionSocket,addr = serverSocket.accept()
 	sentence = connectionSocket.recv(1024)
 	connectionSocket.send(sentence)
@@ -209,42 +209,42 @@ while 1:
 	
 #Programme filtre :
 ===
-from socket import *
+	from socket import *
 
-serverPortIN = 12000
-serverPortOUT = 13000
-serverName = "localhost"
+	serverPortIN = 12000
+	serverPortOUT = 13000
+	serverName = "localhost"
 
-clientSocket = socket(AF_INET, SOCK_STREAM)
-clientSocket.connect((serverName,serverPortOUT))
+	clientSocket = socket(AF_INET, SOCK_STREAM)
+	clientSocket.connect((serverName,serverPortOUT))
 
-serverSocket = socket(AF_INET,SOCK_STREAM)
-serverSocket.bind(('',serverPortIN))
-serverSocket.listen(1)
+	serverSocket = socket(AF_INET,SOCK_STREAM)
+	serverSocket.bind(('',serverPortIN))
+	serverSocket.listen(1)
 
-while 1:
+	while 1:
 	connectionSocket, addr = serverSocket.accept()
 	sentence = connectionSocket.recv(1024)
 	modifiedSentence = sentence.upper()
 	clientSocket.send(modifiedSentence)
 	connectionSocket.close()
 
-clientSocket.close()
+	clientSocket.close()
 
    
 
 #Programme client :
 ===
 
-from socket import *
+	from socket import *
 
-serverName = 'localhost'
-serverPort = 12000
-clientSocket = socket(AF_INET, SOCK_STREAM)
-clientSocket.connect((serverName,serverPort))
-sentence = raw_input('Input lowercase sentence:')
-clientSocket.send(sentence)
-modifiedSentence = clientSocket.recv(1024)
-print 'From Server:', modifiedSentence
-clientSocket.close()
+	serverName = 'localhost'
+	serverPort = 12000
+	clientSocket = socket(AF_INET, SOCK_STREAM)
+	clientSocket.connect((serverName,serverPort))
+	sentence = raw_input('Input lowercase sentence:')
+	clientSocket.send(sentence)
+	modifiedSentence = clientSocket.recv(1024)
+	print 'From Server:', modifiedSentence
+	clientSocket.close()
 
